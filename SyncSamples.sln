@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoResetEventSample", "Aut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountdownEventSample", "CountdownEventSample\CountdownEventSample.csproj", "{62D5D363-F205-466C-999D-E658CA603A19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterlockedSample", "InterlockedSample\InterlockedSample.csproj", "{E2E94E21-913B-4794-ABBE-1EF675C235F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{62D5D363-F205-466C-999D-E658CA603A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62D5D363-F205-466C-999D-E658CA603A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62D5D363-F205-466C-999D-E658CA603A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2E94E21-913B-4794-ABBE-1EF675C235F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E94E21-913B-4794-ABBE-1EF675C235F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E94E21-913B-4794-ABBE-1EF675C235F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E94E21-913B-4794-ABBE-1EF675C235F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
