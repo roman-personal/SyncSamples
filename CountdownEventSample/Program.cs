@@ -9,6 +9,7 @@ namespace CountdownEventSample {
         const int ItemsCount = 10000;
         static ConcurrentQueue<int> queue;
         static CountdownEvent cde;
+
         static void Main(string[] args) {
             queue = new ConcurrentQueue<int>(Enumerable.Range(0, ItemsCount));
             using (cde = new CountdownEvent(ItemsCount)) {
