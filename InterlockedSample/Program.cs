@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace InterlockedSample {
+    // Атомарный инкремент переменной при помощи Interlocked
     internal class Program {
         static int value = 0;
 

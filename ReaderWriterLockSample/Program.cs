@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace ReaderWriterLockSample {
+    // Потокобезопасный доступ на чтение/запись на базе ReaderWriterLockSlim
     internal class Program {
         static ReadWriteLockedCache cache;
 

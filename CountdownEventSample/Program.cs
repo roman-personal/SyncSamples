@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace CountdownEventSample {
+    // Ожидание окончания работы нескольких консьюмеров при помощи CountdownEvent
     internal class Program {
         const int ItemsCount = 10000;
         static ConcurrentQueue<int> queue;

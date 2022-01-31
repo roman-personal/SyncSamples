@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace MonitorSample {
-    // Пример использования Monitor для предотвращения состояния гонки
+    // Использование Monitor для предотвращения состояния гонки
     internal class Program {
         static int value = 0;
         static object sync = new object();

@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace LockSample {
-    // Пример использования lock для предотвращения состояния гонки
+    // Использование lock для предотвращения состояния гонки
     internal class Program {
         static int value = 0;
         static object sync = new object();

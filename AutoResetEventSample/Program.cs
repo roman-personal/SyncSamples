@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace AutoResetEventSample {
+    // Пример использования AutoResetEvent для согласования работы потоков
     internal class Program {
         static int value = 0;
         static AutoResetEvent event1;

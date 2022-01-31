@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace SpinLockSample {
-    // Пример использования SpinLock для предотвращения состояния гонки
+    // Использование SpinLock для предотвращения состояния гонки
     internal class Program {
         static int value = 0;
         static SpinLock spinlock = new SpinLock();

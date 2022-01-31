@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 
 namespace ReaderWriterLockSample {
+    // Потокобезопасная коллекция с использованием ReaderWriterLockSlim
     internal class ReadWriteLockedCache : IDisposable {
         ReaderWriterLockSlim cacheLock = new ReaderWriterLockSlim();
         readonly Dictionary<int, string> innerCache = new Dictionary<int, string>();
@@ -18,7 +19,7 @@ namespace ReaderWriterLockSample {
         }
 
         public string Read(int key) {
-            cacheLock.EnterReadLock();
+            cacheLock.EnterReadLock(); // Блокировка чтения
             try {
                 return innerCache[key];
             }
@@ -28,7 +29,7 @@ namespace ReaderWriterLockSample {
         }
 
         public void Add(int key, string value) {
-            cacheLock.EnterWriteLock();
+            cacheLock.EnterWriteLock(); // Блокировка записи
             try {
                 innerCache.Add(key, value);
             }
@@ -38,10 +39,10 @@ namespace ReaderWriterLockSample {
         }
 
         public void Modify(int key, string value) {
-            cacheLock.EnterUpgradeableReadLock();
+            cacheLock.EnterUpgradeableReadLock(); // Обновляемая блокировка на чтение
             try {
                 if (innerCache[key] != value) {
-                    cacheLock.EnterWriteLock();
+                    cacheLock.EnterWriteLock(); // Повышение уровня блокировки
                     try {
                         innerCache[key] = value;
                     }
